@@ -1,10 +1,10 @@
 'use server'
 
-import Exa from "exa-js"; 
+import Exa, { SearchResult } from 'exa-js';
 
 const exa = new Exa(process.env.EXA_API_KEY || '');
 
-export async function searchExaAI(query: string) {
+export async function searchExaAI(query: string): Promise<{ success: boolean; data?: SearchResult; error?: string }> {
   try {
     const result = await exa.searchAndContents(
       query,

@@ -23,9 +23,9 @@ export async function summarizeText(text: string) {
     const completion = await openai.chat.completions.create({
       messages: [
         { role: "system", content: "You are a helpful assistant that summarizes information." },
-        { role: "user", content: `Summarize the following information about GTA 5 release dates: ${text}` }
+        { role: "user", content: `Summarize the following information: ${text}` }
       ],
-      model: "gpt-4o-mini",
+      model: "gpt-3.5-turbo",
     });
 
     return { success: true, data: completion.choices[0].message.content };

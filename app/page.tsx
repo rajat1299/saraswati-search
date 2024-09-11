@@ -6,6 +6,7 @@ import { searchExaAI } from '../src/actions/exa-actions';
 import { summarizeText } from '../src/actions/openai-actions';
 import { Playfair_Display } from 'next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { ExaResult } from 'exa-js';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
@@ -24,7 +25,7 @@ const getAutocompleteSuggestions = (query: string) => {
 export default function Home() {
   const [query, setQuery] = useState('');
   const [summary, setSummary] = useState('');
-  const [exaResults, setExaResults] = useState<any[]>([]);
+  const [exaResults, setExaResults] = useState<ExaResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -69,9 +70,9 @@ export default function Home() {
         console.log('Exa results set:', result.data.results);
 
         const relevantSources = result.data.results
-          .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+          .sort((a: ExaResult, b: ExaResult) => ((b.score ?? 0) - (a.score ?? 0)))
           .slice(0, 5)
-          .map(item => item.text)
+          .map((item: ExaResult) => item.text)
           .join('\n\n');
 
         console.log('Relevant sources for summarization:', relevantSources);
