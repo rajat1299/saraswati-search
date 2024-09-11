@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { searchExaAI } from '@/actions/exa-actions'
+import { searchExaAI } from '../../src/actions/exa-actions'
+import React from 'react'
 
 export default function SearchComponent() {
   const [query, setQuery] = useState('')
