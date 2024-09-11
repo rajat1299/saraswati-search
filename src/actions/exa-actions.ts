@@ -2,7 +2,7 @@
 
 import Exa from 'exa-js';
 
-const exa = new Exa("5c63aa2c-7324-4b7c-9c22-23bb4ff5f62e");
+const exa = new Exa(process.env.EXA_API_KEY);
 
 export async function searchExaAI(query: string) {
   try {
