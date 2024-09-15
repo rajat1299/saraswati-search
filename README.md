@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Saraswati - AI-Powered Search Engine ( saraswatisearch.com )
 
-## Getting Started
+Welcome to Saraswati, an AI-powered search engine designed to bring knowledge to your fingertips. This application integrates search capabilities, displays results from various sources, and allows users to interact with retrieved information through a conversational interface.
 
-First, run the development server:
+Features
+AI-Powered Search: Saraswati intelligently searches through a vast pool of information and delivers the most relevant results.
+Interactive Results: View and explore top results in a seamless UI with real-time animations.
+Beautiful UI: Enjoy a visually appealing cosmos theme 
+Reset Functionality: Easily reset your search and start over without refreshing the page.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Usage
+Search for Information: Type your query in the search box and hit the "Search" button. Saraswati will fetch results and display them for you to explore.
+Interact with Results: Review the top results and click on them to read more. You can also engage with a conversational assistant that summarizes and answers questions based on your query.
+Reset the Search: If you'd like to perform a new search, hit the "Reset Search" button to clear all inputs and results.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Technologies Used
+React: Frontend framework for building the user interface.
+Next.js: Framework for server-side rendering and API routes.
+Framer Motion: Used for smooth animations and transitions.
+ExaAI: Backend engine powering search functionalities.
+TypeScript: For type-safe JavaScript development.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Upcoming Features
+Recipe Discovery: Brainstorm and organize your favorite recipes with AI.
+Search Collections: Organize your search results into collections for easy reference.
+Perplexity Integration: Search for YouTube videos with focused results.
+Multi-purpose Search: Create code, summarize articles, and handle emails, all in one platform.
+File & Web Search: Ask questions about your files and search the web without leaving the app.
+Academic Research: Conduct deep searches through academic databases.
+Business Insights: Get tailored data to make impactful business decisions.
+News Aggregation: Receive consolidated news from multiple perspectives for a balanced view.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
